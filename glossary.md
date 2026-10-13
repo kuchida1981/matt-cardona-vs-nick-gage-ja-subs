@@ -40,6 +40,7 @@
 | heel | ヒール | |
 | indie wrestling | インディー・プロレス | |
 | title belt | ベルト | |
+| Pookie Man (Pooky Man) | プーキーマン | ゲージ側のネタに出てくるカード (ポケモン風のパロディか。要確認) |
 
 ## 文体メモ
 
