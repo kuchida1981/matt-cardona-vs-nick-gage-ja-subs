@@ -17,6 +17,8 @@ YouTube 動画 [The Untold Story of Matt Cardona vs. Nick Gage | The Deathmatch 
 | 5 | タイミング調整・確認 | Subtitle Edit または Aegisub で波形を見ながら調整。`mpv --sub-file=ja.srt` で最初から最後までプレビュー | `ja.srt` (完成) |
 | 6 | 提供 | 動画の所有者へ字幕の提供を申し出る (YouTube の「コミュニティ字幕」または直接連絡) | - |
 
+作業の経過・コマンド・判断の記録は [NOTES.md](NOTES.md) にまとめている。
+
 ## 方針
 
 - タイムコードは Whisper が出したものを基準にする。翻訳工程では触らず、機械的に検証する (番号・時刻が `en.srt` と一致するか)
