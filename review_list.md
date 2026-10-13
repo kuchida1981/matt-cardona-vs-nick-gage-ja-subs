@@ -85,21 +85,48 @@ I got to call my uh
 
 記入時の「自動字幕」の記憶と、`work/yt_auto_en.txt` の内容が違っていました。**再度聞いて決めてください。**
 
-| 時刻 | 記入内容 | `yt_auto_en.txt` | 現在の `en.srt` |
-|------|----------|------------------|-----------------|
-| 05:41 | `same world` | `same role` (Whisper も `role`) | `same world. [?]` (`room` の可能性もある) |
-| 21:23 | `who fucking loves Nick Gage` | `love Mickey` (Whisper 2モデルも `Mickey/Mickie`) | `who fucking loves Nick Gage` (文脈上は妥当) |
-| 25:11 | `I got to call my uh` | `Oh yeah, John Car.` (`John Carlo` は動画内で3回登場する人物) | `I got to call my, uh, [?]` |
-| 25:15 | `did this match?` | `did this before?` (Whisper も `before`) | `did this match?` |
-| 26:56 | `prowrestlings.com/merch` | `pros.com/mackro` (Whisper は `... slash macrotown`) | `prowrestlingtees.com/mackro. [?]` |
+| 時刻 | 記入内容 | `yt_auto_en.txt` | 現在の `en.srt` | 回答 |
+|------|----------|------------------|-----------------|------|
+| 05:41 | `same world` | `same role` (Whisper も `role`) | `same world. [?]` (`room` の可能性もある) | "same world" が意味的にも正しいような気がするよ|
+| 21:23 | `who fucking loves Nick Gage` | `love Mickey` (Whisper 2モデルも `Mickey/Mickie`) | `who fucking loves Nick Gage` (文脈上は妥当) | 意味としても記入内容の通りが正しいと思う |
+| 25:11 | `I got to call my uh` | `Oh yeah, John Car.` (`John Carlo` は動画内で3回登場する人物) | `I got to call my, uh, [?]` | https://chrisvanvliet.com/2022/12/15/matt-cardona-says-he-wants-to-return-to-wwe-how-gcw-changed-his-career-betting-on-yourself/ 人名である可能性もありそうだ |
+| 25:15 | `did this match?` | `did this before?` (Whisper も `before`) | `did this match?` | 自信がない. 聞き取り的に・意味的に確度高いほうをとりたい |
+| 26:56 | `prowrestlings.com/merch` | `pros.com/mackro` (Whisper は `... slash macrotown`) | `prowrestlingtees.com/mackro. [?]` | グッズ販売に誘導してるようだったしどっちでもいいような |
 
 ### F-4. 未決 (自動字幕と Whisper が割れている、またはどちらも怪しい)
 
 - 10:04: `That's what I'm talking about.` ⇄ `That's my mother.` (後者を `[?]` 付きで採用)
 - 19:21: `The fucking Scottish!` ⇄ `star` (後者を `[?]` 付きで採用)
+
+    * 前者に聞こえる
+
 - 24:30: `he was mad at us` ⇄ `he was awesome`。24:42 の `chunk` 周辺 (`chunks too`?)
 - 27:30: `Those are fine.` ⇄ `The nose are fine.` (後者を `[?]` 付きで採用)
+
+    * 前者っぽく聞こえる. 意味がとおるほうを採りたい
+
 - 22:01: `suplexes` (推測) ⇄ 自動字幕 `flex his gauge`
+
+    * 後者は意味わかりますか? 意味とおりますか? "guage" ではなく人名の "Gage" だと思うんだが
+
 - 11:14: `successful wrestling` の前後。自動字幕は `It wasn't I know it was successful in wrestling`
+
+    * 後者な気が...
+
 - 08:45: `rink` ⇄ `rank`。おそらく `ring`
+
+    * "ring" だと思う
+
 - 23:07: `Get out of my house` ×5 は自動字幕にない (観客の声で拾えていない可能性)
+
+    * あってるのかな... チャントorヤジ
+
+### F-5. F-3 / F-4 の回答の反映結果
+
+- 05:41 `same world`、21:23 `who fucking loves Nick Gage` はそのまま採用 (`[?]` を外した)。
+- 25:11 `John Carlo.` に決定。記事に `John Carlo` が実在の人物として出ており (試合後に Cardona へホテルの部屋とタオルを貸した人物)、27:42 の発話とも一致する。25:15 は `did this before?` (ASR 3つが一致、意味も通る)。
+- 19:21 `The fucking Scottish!`、27:30 `Those are fine.` は Whisper の出力に戻した。
+- 08:45 `ring`、11:14 は自動字幕側の `It wasn't, I know it was successful in wrestling.` (`[?]` 付き。意味は文脈から訳す)。
+- 22:01: 自動字幕の `flex his gauge` は、`plexes Gage` を ASR が聞き間違えたものと思われる (`gauge` は `Gage` の誤り)。そのため `suplexes Gage through the glass` を `[?]` 付きで残した。
+- 10:04 `That's my mother.`、24:30、26:56 は未決のまま `[?]` を残した。
+- 23:07 `Get out of my house` ×5 は観客のチャント/ヤジとしてそのまま残す。
