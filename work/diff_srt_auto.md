@@ -1,0 +1,140 @@
+# en.srt と YouTube 自動字幕の差分
+
+時刻は en.srt 基準。左: en.srt (Whisper) / 右: YouTube 自動字幕。言いよどみ・伏せ字・表記ゆれは除外済み。
+
+- [00:20] `i mean` ⇄ `and we | have`
+- [01:20] `∅` ⇄ `this`
+- [01:57] `∅` ⇄ `there was`
+- [02:08] `∅` ⇄ `it's`
+- [02:56] `gcw` ⇄ `bcw`
+- [03:33] `motherfuckers` ⇄ `∅`
+- [03:40] `was` ⇄ `is`
+- [03:53] `him | name's` ⇄ `name is`
+- [03:56] `death match wrestler` ⇄ `deathmatch wrestle`
+- [04:21] `helped | changed` ⇄ `how i help | change`
+- [04:25] `in` ⇄ `∅`
+- [04:29] `in | life` ⇄ `on | way | u`
+- [04:43] `∅` ⇄ `about`
+- [04:48] `mdk mdk mdk` ⇄ `you know`
+- [05:14] `∅` ⇄ `that's`
+- [05:22] `deathmatch | a nick gage` ⇄ `death match | an engage`
+- [05:32] `∅` ⇄ `he`
+- [05:41] `world i mean` ⇄ `role and`
+- [06:23] `∅` ⇄ `hit it off`
+- [06:34] `if` ⇄ `∅`
+- [06:58] `sure | yeah` ⇄ `comfortable`
+- [07:59] `pussy` ⇄ `and`
+- [08:19] `now` ⇄ `∅`
+- [08:23] `f ed` ⇄ `∅`
+- [08:30] `pookie` ⇄ `pooky`
+- [08:33] `pookie` ⇄ `pooky | i wouldn't think`
+- [08:45] `rink` ⇄ `uh the back corner of the rank`
+- [08:52] `jon` ⇄ `john`
+- [09:36] `destroyed` ⇄ `the story`
+- [09:54] `i'm` ⇄ `∅`
+- [09:58] `kill | 2 6` ⇄ `joe | 26`
+- [10:20] `that's | isn't` ⇄ `yeah it's | ain't`
+- [10:35] `grind` ⇄ `grim`
+- [11:14] `wasn't right away with | into wwe` ⇄ `it wasn't | know it was | in | in`
+- [11:21] `pounds` ⇄ `lbs`
+- [12:08] `good yeah` ⇄ `∅`
+- [12:12] `yeah` ⇄ `we're we're at least`
+- [12:50] `pussy | pussy | newsflash` ⇄ `news flash`
+- [13:07] `ya` ⇄ `you`
+- [13:14] `for | jimmy's` ⇄ `jimmy`
+- [13:43] `∅` ⇄ `we`
+- [14:01] `∅` ⇄ `this`
+- [14:29] `∅` ⇄ `ah god`
+- [14:34] `∅` ⇄ `face of that`
+- [14:38] `i` ⇄ `you know what i'm saying | all right they`
+- [14:45] `1800` ⇄ `1 800`
+- [14:55] `1200` ⇄ `12 200`
+- [15:14] `∅` ⇄ `it was a`
+- [15:39] `∅` ⇄ `no`
+- [15:49] `∅` ⇄ `we`
+- [16:14] `shtick` ⇄ `stick`
+- [16:49] `do | or do` ⇄ `∅`
+- [17:35] `∅` ⇄ `what's on what's`
+- [18:22] `∅` ⇄ `happy`
+- [18:43] `∅` ⇄ `this is`
+- [19:01] `at` ⇄ `and`
+- [19:52] `cardona` ⇄ `park dona`
+- [20:05] `the collector's` ⇄ `∅`
+- [20:12] `cardona with a` ⇄ `cardono the`
+- [20:20] `brake` ⇄ `break`
+- [20:27] `pane` ⇄ `pain`
+- [20:37] `in` ⇄ `and`
+- [20:47] `∅` ⇄ `this is`
+- [20:55] `let's go who loves nick gage` ⇄ `they love mickey`
+- [21:57] `cardona | light` ⇄ `cardono | leg`
+- [22:01] `oh suplexes gage` ⇄ `flex his gauge`
+- [22:28] `can` ⇄ `could`
+- [22:44] `∅` ⇄ `this`
+- [22:48] `i think i` ⇄ `the guy`
+- [22:56] `∅` ⇄ `special you know`
+- [23:07] `get out of my house get out of my house get out of my house get out of my house get out of my house` ⇄ `∅`
+- [23:14] `show boat` ⇄ `showboat`
+- [23:33] `it's one of my things` ⇄ `∅`
+- [23:43] `oh oh what the hell gcw champion` ⇄ `jcw`
+- [23:50] `gcw good oh whoa oh my gosh hey we're going` ⇄ `jcw we want`
+- [23:58] `at all` ⇄ `with | off`
+- [24:30] `mad at us | he was` ⇄ `awesome | you were`
+- [24:36] `he's supposed to be lost | i was watching for a second` ⇄ `dude`
+- [24:42] `he gets a chunk here's` ⇄ `chunks`
+- [24:45] `∅` ⇄ `on the left shoulder`
+- [24:48] `it` ⇄ `him just`
+- [24:52] `∅` ⇄ `in`
+- [25:05] `∅` ⇄ `there | i'm`
+- [25:11] `yes | i got to call my uh` ⇄ `john car like`
+- [25:18] `match | okay washout` ⇄ `before | uh wash off`
+- [25:25] `already pulling` ⇄ `like blowing`
+- [25:28] `are` ⇄ `∅`
+- [25:40] `do | get it ooh` ⇄ `did | didn't`
+- [25:43] `woo` ⇄ `∅`
+- [25:57] `at a` ⇄ `to the`
+- [26:03] `could` ⇄ `can`
+- [26:17] `whatever it` ⇄ `away everybody`
+- [26:22] `i'm | let's curious` ⇄ `when the security's`
+- [26:27] `yeah woo` ⇄ `sorry i didn't`
+- [26:36] `three | a` ⇄ `3 | 1`
+- [26:54] `mm` ⇄ `∅`
+- [26:57] `prowrestlingtees` ⇄ `pros`
+- [27:01] `we've got the magic` ⇄ `that match`
+- [27:11] `on me` ⇄ `need bandages | underneath`
+- [27:15] `∅` ⇄ `where else`
+- [27:20] `∅` ⇄ `it's`
+- [27:30] `a bit | is` ⇄ `are`
+- [27:36] `∅` ⇄ `that's`
+- [27:40] `sabu` ⇄ `saboo`
+- [27:49] `grabbed` ⇄ `grab you know`
+- [27:55] `∅` ⇄ `t i | this this`
+- [28:35] `and say` ⇄ `by`
+- [28:48] `∅` ⇄ `i got`
+- [29:01] `on my` ⇄ `am i`
+- [29:31] `of | deathmatch 2` ⇄ `with | death match two`
+- [29:35] `bell to bell` ⇄ `belltobell`
+- [30:29] `it` ⇄ `this`
+- [30:57] `of the | wrestling` ⇄ `to put | trust`
+- [31:00] `∅` ⇄ `it's | it's it's`
+- [31:13] `gcw` ⇄ `gco | we`
+- [31:18] `went to build` ⇄ `wouldn't have built`
+- [31:41] `∅` ⇄ `was`
+- [31:49] `deathmatch` ⇄ `death match`
+- [32:12] `five` ⇄ `5`
+- [32:43] `then` ⇄ `that`
+- [32:52] `i` ⇄ `we`
+- [33:22] `∅` ⇄ `then i`
+- [34:01] `madison square` ⇄ `masses`
+- [34:09] `∅` ⇄ `this this`
+- [34:22] `happening` ⇄ `happened in`
+- [34:30] `∅` ⇄ `at the`
+- [35:11] `hit` ⇄ `the door's eye`
+- [35:20] `wrestling` ⇄ `wrestling's`
+- [36:05] `would` ⇄ `will`
+- [36:10] `a` ⇄ `it's`
+- [36:30] `∅` ⇄ `next`
+- [37:02] `deathmatch` ⇄ `death match`
+- [37:39] `∅` ⇄ `always`
+- [38:21] `deathmatch` ⇄ `death match`
+- [38:31] `all right` ⇄ `trending worldwide`
+- [38:40] `at it` ⇄ `∅`

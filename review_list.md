@@ -66,3 +66,40 @@ I got to call my uh
 ## E. 機械的に統一してよいもの (確認不要)
 
 `wanna`/`want to`、`gonna`/`going to`、`1800`/`1 800`、`cuz`/`because`、`headfirst`/`head first`、`showboat`/`show boat`、`break`/`brake` (文脈で判断)。
+
+## F. 自動字幕の全文との突き合わせ (`work/diff_srt_auto.md`)
+
+### F-1. 反映済み (自動字幕のほうが明らかに正しい、または Whisper の抜け)
+
+- `Put that camera right here` (03:27)、`I think that is my guard` (06:58)、`6'6", 250 pounds` (11:20)、`Steal the show` (17:39)、`Cardona with the light tube` (21:57)、`MDK is all about` (04:32)
+- `GCW champion, how you feel?` (23:43)。直前の 01:21 の `Champion, how you feel?` とも一致
+- 31:12 付近: `me and GCW, man, we made a plan when I was in prison to put this shit back on the map`。`Warrant Out` は Whisper の誤認識だった
+- `John Carlo` に統一 (Whisper の `Giancarlo` を置換。5:22 では Whisper も `John Carlo`)
+- Whisper が拾っていなかった発話を追加: `Champion, how you feel?` (01:27)、`He's got some black pants and shoes already. Roll. I got to put some knee pads on under here though, just in case.` (08:12)、`..., not even paying for it.` (38:28)
+
+### F-2. Whisper のほうが正しかった (自動字幕は誤り・不採用)
+
+`BCW` (02:56。正しくは GCW)、`an engage match` (05:22)、`Murder Death Joe Gang` (09:58。正しくは **Murder Death Kill**。`MDK` の展開形がこれで確定)、`Saboo` (27:40。正しくは Sabu)、`masses garden` (34:01。正しくは Madison Square Garden)、`grim mode` (10:35。`grind` のはず)
+
+### F-3. 要再確認: 記入いただいた内容と、自動字幕ファイルの内容が食い違う箇所
+
+記入時の「自動字幕」の記憶と、`work/yt_auto_en.txt` の内容が違っていました。**再度聞いて決めてください。**
+
+| 時刻 | 記入内容 | `yt_auto_en.txt` | 現在の `en.srt` |
+|------|----------|------------------|-----------------|
+| 05:41 | `same world` | `same role` (Whisper も `role`) | `same world. [?]` (`room` の可能性もある) |
+| 21:23 | `who fucking loves Nick Gage` | `love Mickey` (Whisper 2モデルも `Mickey/Mickie`) | `who fucking loves Nick Gage` (文脈上は妥当) |
+| 25:11 | `I got to call my uh` | `Oh yeah, John Car.` (`John Carlo` は動画内で3回登場する人物) | `I got to call my, uh, [?]` |
+| 25:15 | `did this match?` | `did this before?` (Whisper も `before`) | `did this match?` |
+| 26:56 | `prowrestlings.com/merch` | `pros.com/mackro` (Whisper は `... slash macrotown`) | `prowrestlingtees.com/mackro. [?]` |
+
+### F-4. 未決 (自動字幕と Whisper が割れている、またはどちらも怪しい)
+
+- 10:04: `That's what I'm talking about.` ⇄ `That's my mother.` (後者を `[?]` 付きで採用)
+- 19:21: `The fucking Scottish!` ⇄ `star` (後者を `[?]` 付きで採用)
+- 24:30: `he was mad at us` ⇄ `he was awesome`。24:42 の `chunk` 周辺 (`chunks too`?)
+- 27:30: `Those are fine.` ⇄ `The nose are fine.` (後者を `[?]` 付きで採用)
+- 22:01: `suplexes` (推測) ⇄ 自動字幕 `flex his gauge`
+- 11:14: `successful wrestling` の前後。自動字幕は `It wasn't I know it was successful in wrestling`
+- 08:45: `rink` ⇄ `rank`。おそらく `ring`
+- 23:07: `Get out of my house` ×5 は自動字幕にない (観客の声で拾えていない可能性)
