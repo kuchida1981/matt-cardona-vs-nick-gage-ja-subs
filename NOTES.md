@@ -84,10 +84,21 @@
 - 確認が必要な箇所を `review_list.md` にまとめた (A: 固有名詞、B: 意味が変わる箇所、C: turbo だけが拾った発話、D: 信頼できない出力、E: 統一してよいもの)。
 - 差分の生データは `work/diff_v3_turbo.md`。
 
-### 8. 次の作業
+### 8. 音声確認の結果を反映
 
-- `review_list.md` の A・B を、音声を聞いて確認する (ユーザー作業)。結果欄に正しい表記を記入。
-- 確認結果を `en.srt` と `glossary.md` に反映して確定 → 日本語訳。
+- `review_list.md` の A・B をユーザーが音声と YouTube 自動字幕で確認 (結果欄を記入済み)。
+- `scripts/apply_fixes.py` で `en.srt` に33件を反映。字幕番号と元の文字列を照合してから置換する。
+- 反映の方針: ユーザーが明示した表記を優先。聞き取れなかった箇所は残して末尾に `[?]` を付けた。
+- 確認でわかったこと:
+  - `MDK` は Nick Gage 側の「ギャング」を指す語 (動画内で `MDK gang`、`MDK Jelly` と言っている)。チャント (`MDK! MDK! MDK!`) もある。展開形 (`Murder Death Kill`) は未確認。
+  - YouTube 自動字幕は、ふつうの語彙 (`get`、`outsider`、`called`、`shower`、`world`) で Whisper の取り違えを正しく直せていた。固有名詞は Whisper と同程度で、サイト名 (`prowrestlingtees.com`) は自動字幕も確実ではなかった。
+  - 自動字幕は、Whisper 2モデルの食い違いを裁く「第3の意見」として有効。
+- 未解決 (`[?]` を付けた): 23:33 のチャント、23:48、24:30、27:21、31:12 の `Warrant Out`、11:15 の `successful wrestling`、22:01 の `suplexes` (推測)、25:07 付近の会話。
+
+### 9. 次の作業
+
+- YouTube の「文字起こし」パネルから自動字幕の全文を取得し、`en.srt` と機械的に突き合わせる (API が 429 のため手動コピーを想定)。
+- `[?]` の残りを確認 → `en.srt` を確定 → `glossary.md` を更新 → 日本語訳。
 - 保留: YouTube 自動字幕の再取得。
 
 ### つまずき・メモ
