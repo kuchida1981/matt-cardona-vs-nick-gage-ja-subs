@@ -14,6 +14,9 @@
 | Chelsea Green | チェルシー・グリーン | Cardona のパートナー |
 | Jon Moxley | ジョン・モクスリー | |
 | Sabu | サブー | デスマッチの伝説的レスラー |
+| Cody Rhodes | コーディ・ローデス | WWE のスター |
+| Roman Reigns | ローマン・レインズ | WWE のスター |
+| Bloodline | ブラッドライン | WWE のユニット |
 | Dave Meltzer | デイブ・メルツァー | レスリング・ジャーナリスト。字幕では「Dave」とだけ言う場合も「メルツァー」と訳す |
 
 ## 団体・イベント・会場
