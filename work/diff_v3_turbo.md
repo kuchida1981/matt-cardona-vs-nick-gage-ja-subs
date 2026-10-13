@@ -1,0 +1,164 @@
+# en.srt (large-v3) と en_turbo.srt (large-v3-turbo) の差分
+
+時刻は en.srt 基準。左: large-v3 / 右: turbo
+
+- [01:22] `∅` ⇄ `like`
+- [01:28] `fuck you gcw` ⇄ `∅`
+- [02:23] `∅` ⇄ `well`
+- [02:33] `∅` ⇄ `you know`
+- [02:56] `gcw` ⇄ `bcw`
+- [03:27] `look at` ⇄ `∅`
+- [03:35] `well` ⇄ `∅`
+- [03:53] `him` ⇄ `∅`
+- [03:57] `russell` ⇄ `trustee`
+- [04:17] ` | up` ⇄ `now | out`
+- [04:21] `helped | changed` ⇄ `help | change`
+- [04:24] ` | ` ⇄ `and | that`
+- [04:29] `give` ⇄ `get`
+- [04:36] `nbk's` ⇄ `mdk's`
+- [04:42] ` | ` ⇄ `and | i'm`
+- [04:48] `fdj fdj fdj` ⇄ `mdj mdj mdj`
+- [05:41] `role i mean` ⇄ `house`
+- [06:32] `like | if` ⇄ ` | `
+- [07:31] `wanna` ⇄ `want to`
+- [07:35] `gotta | wanna` ⇄ `got to | want to`
+- [08:09] `∅` ⇄ `you are the keeper against all this`
+- [08:17] ` | now` ⇄ `he's got the black pants there he's already like this i'm going to roll i've got to put some knee pads on under here like where's the case | `
+- [08:34] `∅` ⇄ `pookie man`
+- [08:45] `rink` ⇄ `rank`
+- [09:36] `destroyed | ` ⇄ `a short | oh`
+- [09:46] `∅` ⇄ `like`
+- [09:55] `gonna` ⇄ `going to`
+- [10:03] `that's what i'm talking about` ⇄ `∅`
+- [10:20] `all` ⇄ `∅`
+- [10:31] `∅` ⇄ `like`
+- [10:35] `mode` ⇄ `mood`
+- [10:56] `that` ⇄ `and`
+- [10:59] `∅` ⇄ `you know`
+- [11:03] `∅` ⇄ `you know`
+- [11:15] `away with |  | ` ⇄ `no way he was | in | you know`
+- [11:19] `you` ⇄ `he`
+- [11:50] `∅` ⇄ `you know`
+- [12:09] `yeah | yeah` ⇄ ` | `
+- [13:14] `for` ⇄ `∅`
+- [13:30] `and` ⇄ `at`
+- [13:36] `∅` ⇄ `fucking piece of shit where's the light to bitch`
+- [13:43] `wanna` ⇄ `want to`
+- [13:46] `outside | outside` ⇄ `outsider | outsider`
+- [14:10] `going to` ⇄ `gonna`
+- [14:17] `mack | going to | want to` ⇄ `matt | gonna | wanna`
+- [14:22] ` | they're gonna | it` ⇄ `is |  | `
+- [14:29] `∅` ⇄ `oh god`
+- [14:34] ` | ` ⇄ `face of that | well`
+- [14:38] ` | i` ⇄ `you know what i'm saying | all right you`
+- [14:45] `1800` ⇄ `1 800`
+- [14:55] `1200` ⇄ `1 200`
+- [15:23] `zach` ⇄ `zack`
+- [15:26] `be honest | him` ⇄ ` | them`
+- [16:10] `yeah` ⇄ `∅`
+- [16:49] `do | cold | do` ⇄ ` | called | `
+- [17:35] `∅` ⇄ `i'm out i just told them all i told them all i was like you're going to not say anything i just told them all i was like okay i'm not going to do it yes yes`
+- [17:56] `going to` ⇄ `gonna`
+- [18:01] `going to` ⇄ `gonna`
+- [18:27] `you know | i mean` ⇄ ` | `
+- [18:31] `you know like | you know` ⇄ ` | `
+- [18:39] `you know` ⇄ `∅`
+- [19:01] `at` ⇄ `in`
+- [19:20] `the fucking scottish and your` ⇄ `∅`
+- [19:35] `matt` ⇄ `back`
+- [19:41] `oh` ⇄ `∅`
+- [19:45] `head first` ⇄ `headfirst`
+- [20:09] `we` ⇄ `you`
+- [20:20] `brake` ⇄ `break`
+- [20:48] `∅` ⇄ `oh`
+- [20:55] `let's go` ⇄ `∅`
+- [21:24] `love mickie` ⇄ `loved mickey`
+- [22:01] `lexus` ⇄ `the flexes`
+- [22:28] `∅` ⇄ `and`
+- [22:39] `to` ⇄ `the`
+- [22:49] ` | you know` ⇄ `of | `
+- [22:57] `you know` ⇄ `it's special`
+- [23:04] `like | get out of my house get out of my house get out of my house get out of my house get out of my house` ⇄ ` | `
+- [23:14] `show boat` ⇄ `showboat`
+- [23:33] `it's one | things slavski ravski ravski ravski ravski` ⇄ `get rid | thing krasnowski krasnowski krasnowski krasnowski krasnowski`
+- [23:43] `oh oh what the hell` ⇄ `∅`
+- [23:48] `are | good` ⇄ `how | killed`
+- [23:53] `good oh whoa oh my gosh hey we're gonna` ⇄ `if we want to`
+- [24:00] `yeah` ⇄ `∅`
+- [24:30] `mad at us | was | a` ⇄ `battling this time | were | the`
+- [24:36] `he's | be lost` ⇄ `he was | lose`
+- [24:39] `for a second` ⇄ `just like`
+- [24:43] `trunk here's | ` ⇄ `chunk he has | on the`
+- [24:47] ` | it` ⇄ `left shoulder yeah | hand just`
+- [24:55] `the` ⇄ `∅`
+- [25:05] `i'm | okay okay` ⇄ `i was | ok`
+- [25:09] `hi | wanna | ` ⇄ `i | want to | i`
+- [25:14] `john carlyle` ⇄ `∅`
+- [25:17] `did this before` ⇄ `∅`
+- [25:24] `like | already pulling` ⇄ ` | blowing`
+- [25:35] `don't know i` ⇄ `∅`
+- [25:40] `do | get it` ⇄ `did | didn't`
+- [25:43] ` | ` ⇄ `sorry | i'm`
+- [25:46] `gonna | gonna` ⇄ `going to | going to`
+- [25:51] `of` ⇄ `∅`
+- [25:57] `a` ⇄ `the`
+- [26:03] `could` ⇄ `can`
+- [26:07] `in` ⇄ `from`
+- [26:11] `it's just | they walk it` ⇄ `which is | like walking`
+- [26:16] `then whether |  | would have those finite |  | shit` ⇄ `and | wouldn't let me | but everyone was behind i had | when | `
+- [26:20] `gonna | i'm | let's curious` ⇄ `going to | then | when the security's`
+- [26:24] `∅` ⇄ `and`
+- [26:27] `yeah woo` ⇄ `sorry`
+- [26:31] `woo` ⇄ `um`
+- [26:48] `woo woo` ⇄ `∅`
+- [26:54] `mm | proresentees` ⇄ ` | prowrestlingtees`
+- [26:58] `slash macrotown | we've got the magic` ⇄ ` | match`
+- [27:06] ` | ` ⇄ `is that | like`
+- [27:11] `∅` ⇄ `we've found it to your side`
+- [27:17] ` | ` ⇄ `uh | it's`
+- [27:21] `i'm drawing` ⇄ `you're growing`
+- [27:25] `∅` ⇄ `oh`
+- [27:29] `it | a bit those are` ⇄ `it's just like | did it was it`
+- [27:36] ` | ` ⇄ `no | like`
+- [27:39] `i look | ` ⇄ ` | a`
+- [27:53] `grab | and` ⇄ `grabbed | `
+- [28:08] ` | ` ⇄ `like | like`
+- [28:13] `∅` ⇄ `like`
+- [28:19] `i` ⇄ `∅`
+- [28:24] `∅` ⇄ `like`
+- [28:29] `∅` ⇄ `like`
+- [28:35] `and say` ⇄ `∅`
+- [28:54] `i'm so` ⇄ `∅`
+- [29:01] `on my` ⇄ `i'm`
+- [29:21] `gonna | show | like` ⇄ `going to | shower | `
+- [29:25] `like` ⇄ `∅`
+- [29:31] `of` ⇄ `with`
+- [29:43] `two` ⇄ `2`
+- [29:54] `∅` ⇄ `i`
+- [29:57] `∅` ⇄ `like`
+- [30:57] `of the death | wrestling` ⇄ `to put that | wrestle`
+- [31:01] `good to will | like people` ⇄ `a little | `
+- [31:05] `∅` ⇄ `oh`
+- [31:12] `gcw | warrant` ⇄ `g c darby | roller`
+- [31:19] `up | had` ⇄ `out | who`
+- [31:31] `the | the` ⇄ `that | that`
+- [31:37] `∅` ⇄ `and`
+- [31:57] `∅` ⇄ `like`
+- [32:04] `∅` ⇄ `like`
+- [32:15] `cuz` ⇄ `because`
+- [32:23] `∅` ⇄ `you know`
+- [33:04] ` | welcome` ⇄ `i'm | welcomed`
+- [33:20] `∅` ⇄ `you know`
+- [34:09] `∅` ⇄ `this this`
+- [34:31] `was that` ⇄ `∅`
+- [34:35] `atlantic` ⇄ `lake`
+- [34:51] `and` ⇄ `it`
+- [34:57] `i made` ⇄ `like i'm in`
+- [35:11] `hit` ⇄ `∅`
+- [36:07] `∅` ⇄ `it`
+- [36:14] `∅` ⇄ `a`
+- [36:25] `uh` ⇄ `∅`
+- [36:38] `gonna | gonna` ⇄ `going to | going to`
+- [37:39] ` | fucking going and` ⇄ `can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't run i can't | `
+- [38:33] `∅` ⇄ `treading worldwide`
+- [38:40] `at` ⇄ `∅`
