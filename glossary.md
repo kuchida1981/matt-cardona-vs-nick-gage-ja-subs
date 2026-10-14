@@ -10,7 +10,7 @@
 | Matt Cardona | マット・カルドナ | 元 WWE の Zack Ryder。動画の語り手の一人 |
 | Zack Ryder | ザック・ライダー | Cardona の WWE 時代のリングネーム |
 | Nick Gage | ニック・ゲージ | デスマッチ・レスラー。ニックネームは別途 (要確認) |
-| John Carlo | ジョン・カルロ | WWE 出身で、試合後に Cardona へホテルの部屋を貸した人物 (記事で確認) |
+| Giancarlo Dittamo | ジャンカルロ・ディタモ | WWE 出身で、試合後に Cardona へホテルの部屋を貸した人物。字幕では「ジャンカルロ」、愛称の「カルロ」と呼ぶ場面もある。以前の "John Carlo" は誤記 |
 | Chelsea Green | チェルシー・グリーン | Cardona のパートナー |
 | Jon Moxley | ジョン・モクスリー | |
 | Sabu | サブゥー | デスマッチの伝説的レスラー |
