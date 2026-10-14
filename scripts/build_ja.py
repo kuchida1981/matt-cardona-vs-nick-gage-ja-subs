@@ -6,6 +6,7 @@
   @until M   終了時刻を en.srt の M 番の終わりにする (結合。M 番側は @drop にする)
   @drop      この字幕を出力しない
 「#番号+」は同じ番号の字幕を時間で分けた2つ目 (話者が変わる場合など)。@start が必須。
+「#0」「#0+」「#0+2」… は en.srt にない字幕 (画面上の文字など)。@start と @end が必須。
 そのほか、表示時間が短い字幕は次の字幕の直前まで自動で延長する (開始時刻は動かさない)。
 usage: python3 -I scripts/build_ja.py en.srt ja ja.srt"""
 import glob, re, sys, unicodedata
@@ -40,7 +41,7 @@ for p in sorted(glob.glob(sys.argv[2] + "/*.txt")):
         if not m: print(f"形式エラー: {p}: {lines[0]!r}"); continue
         n = int(m[1]); key = (n, m[2] or "")
         if key in ja: print(f"重複: #{n}{key[1]}")
-        if n not in en: print(f"en.srt にない番号: #{n}"); continue
+        if n not in en and n != 0: print(f"en.srt にない番号: #{n}"); continue
         text = []; opt = {}
         for x in lines[1:]:
             if x.startswith("@"):
@@ -51,10 +52,11 @@ cues = []  # [start, end, text, key]
 for key in sorted(ja):
     n = key[0]; text, opt = ja[key]
     if "drop" in opt: continue
-    s, e = ent[n]
-    if key[1]:
+    s, e = ent[n] if n else (0, 0)
+    if n and key[1]:
         if "start" not in opt: print(f"@start が必要: #{n}{key[1]}"); continue
         e = ent[n][1]
+    if not n and not ("start" in opt and "end" in opt): print(f"#0 には @start と @end が必要: #{n}{key[1]}"); continue
     if "start" in opt: s = sec(opt["start"])
     if "until" in opt: e = ent[int(opt["until"])][1]
     if "end" in opt: e = sec(opt["end"])
@@ -67,6 +69,7 @@ for i, c in enumerate(cues[:-1]):
 # 短い字幕を延長する
 ext = 0
 for i, c in enumerate(cues):
+    if c[3][0] == 0: continue  # 画面上の文字は指定どおりの時間にする
     w = sum(width(x) for x in c[2])
     need = min(MAX_DUR, max(MIN_DUR, w / CPS))
     lim = cues[i + 1][0] - GAP if i + 1 < len(cues) else c[0] + need
