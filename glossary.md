@@ -13,7 +13,7 @@
 | John Carlo | ジョン・カルロ | WWE 出身で、試合後に Cardona へホテルの部屋を貸した人物 (記事で確認) |
 | Chelsea Green | チェルシー・グリーン | Cardona のパートナー |
 | Jon Moxley | ジョン・モクスリー | |
-| Sabu | サブー | デスマッチの伝説的レスラー |
+| Sabu | サブゥー | デスマッチの伝説的レスラー |
 | Cody Rhodes | コーディ・ローデス | WWE のスター |
 | Roman Reigns | ローマン・レインズ | WWE のスター |
 | Bloodline | ブラッドライン | WWE のユニット |
