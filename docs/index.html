@@ -3514,6 +3514,20 @@ GCWの本拠地だ!
     setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
   });
 
+  /* ---------- Keep the screen awake while reviewing (Screen Wake Lock API) ---------- */
+  var wakeLock = null, wantLock = false;
+  function acquireLock() {
+    if (!("wakeLock" in navigator) || wakeLock || document.visibilityState !== "visible") return;
+    navigator.wakeLock.request("screen").then(function (l) {
+      wakeLock = l;
+      l.addEventListener("release", function () { wakeLock = null; });
+    }).catch(function () {});
+  }
+  function releaseLock() { if (wakeLock) { wakeLock.release().catch(function () {}); wakeLock = null; } }
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible" && wantLock) acquireLock();
+  });
+
   /* ---------- YouTube IFrame API ---------- */
   var notice = document.getElementById("notice");
   window.onYouTubeIframeAPIReady = function () {
@@ -3525,6 +3539,11 @@ GCWの本拠地だ!
       playerVars: vars,
       events: {
         onReady: function () { ready = true; },
+        onStateChange: function (e) {
+          // 1=playing, 2=paused: 確認中は画面ロックしない。0=ended, -1/5 は解除
+          wantLock = (e.data === 1 || e.data === 2);
+          if (wantLock) acquireLock(); else releaseLock();
+        },
         onError: function () { notice.hidden = false; }
       }
     });
