@@ -80,12 +80,15 @@
     background: rgba(0, 0, 0, 0.75);
     padding: 0.2em 0.6em;
     border-radius: 4px;
-    /* 視認性向上のためのテキスト縁取り */
+    /* 視認性向上のためのテキスト縁取り（フォント内部の線浮きアーティファクトを防ぐためtext-shadowで表現） */
     text-shadow: 
-      0 0 4px #000000,
-      0 0 8px #000000,
-      0 1px 2px rgba(0, 0, 0, 0.8);
-    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+      -1px -1px 0 #000000,
+       1px -1px 0 #000000,
+      -1px  1px 0 #000000,
+       1px  1px 0 #000000,
+       0 0 4px #000000,
+       0 0 8px #000000,
+       0 1px 3px rgba(0, 0, 0, 0.9);
     max-width: 90%;
   }
   .overlay span:empty { display: none; }
@@ -93,7 +96,14 @@
   .stage:fullscreen .overlay span {
     font-size: clamp(22px, 3.6vw, 46px);
     padding: 0.25em 0.75em;
-    -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.7);
+    text-shadow: 
+      -1.5px -1.5px 0 #000000,
+       1.5px -1.5px 0 #000000,
+      -1.5px  1.5px 0 #000000,
+       1.5px  1.5px 0 #000000,
+       0 0 6px #000000,
+       0 0 12px #000000,
+       0 2px 4px rgba(0, 0, 0, 0.9);
   }
   .stage:fullscreen .overlay { bottom: 9%; }
 
@@ -162,31 +172,7 @@
   #cues time { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 2px; font-variant-numeric: tabular-nums; }
   #cues .t { white-space: pre-line; overflow-wrap: anywhere; }
 
-  /* Collapsible creator guide */
-  .info-accordion {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
-    overflow: hidden;
-  }
-  .info-accordion summary {
-    padding: 14px 18px; font-weight: 600; font-size: 14px; cursor: pointer;
-    display: flex; align-items: center; justify-content: space-between;
-    user-select: none; list-style: none;
-  }
-  .info-accordion summary::-webkit-details-marker { display: none; }
-  .info-accordion summary::after { content: "+"; font-size: 18px; color: var(--muted); }
-  .info-accordion[open] summary::after { content: "−"; }
-  .info-accordion summary:hover { background: var(--surface-hover); }
-  .info-content {
-    padding: 0 18px 18px; display: grid; gap: 12px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line);
-    padding-top: 14px;
-  }
-  .info-content p { margin: 0; line-height: 1.6; }
-  .info-content ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
-  .info-content code { font-family: var(--font-mono); font-size: .95em; color: var(--fg); background: rgba(255,255,255,0.06); padding: 2px 5px; border-radius: 3px; }
-
-  footer { color: var(--muted); font-size: 12px; text-align: center; padding-block: 10px; }
-
-  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+  footer { color: var(--muted); font-size: 12px; text-align: center; padding-block: 16px; }
 </style>
 </head>
 <body>
@@ -226,7 +212,6 @@
           <output id="shiftOut" aria-live="polite">0.0s</output>
           <button type="button" id="later" aria-label="字幕を0.5秒遅く表示">+0.5s</button>
         </span>
-        <button type="button" id="dl">SRTダウンロード (ja.srt)</button>
       </div>
     </section>
 
@@ -239,84 +224,8 @@
     </aside>
   </div>
 
-  <details class="info-accordion">
-    <summary>動画制作者様へのご案内 & 字幕ファイル（SRT）について</summary>
-    <div class="info-content">
-      <p>このページは、YouTube動画に対して作成した日本語字幕（SRT）の同期確認・視聴用ビューアです。動画はYouTube公式プレイヤーを埋め込んでおり、チャンネルや動画の設定を変更するものではありません。</p>
-      <p>本字幕は制作者様に無償でご提供しております。公式字幕として適用いただく場合は、上記の「SRTダウンロード」ボタンからファイルを保存し、YouTube Studioよりご登録いただけます。</p>
-      <div><strong>YouTube Studioへの登録手順:</strong></div>
-      <ol>
-        <li>「SRTダウンロード」ボタンで <code>ja.srt</code> を保存します。</li>
-        <li>YouTube Studioで対象の動画を開き、「字幕」を選択します。</li>
-        <li>「言語を追加」から「日本語」を選択し、「追加」をクリックします。</li>
-        <li>「ファイルをアップロード」→「タイミングあり」を選び、ダウンロードしたSRTファイルを選択します。</li>
-      </ol>
-      <p>※タイミング調整ボタンはこのページ上での同期調整のみを行い、SRTファイルの内容自体は変更されません。</p>
-    </div>
-  </details>
-
   <footer>
     本動画の著作権は権利者に帰属します。動画はYouTubeの埋め込み規約に基づき再生しています。
-  </footer>
-</div>
-
-  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
-</style>
-</head>
-<body>
-<div class="page">
-
-  <header>
-    <p class="kicker">Japanese subtitles · preview</p>
-    <h1>Japanese subtitles for your video</h1>
-    <p class="about">I made Japanese subtitles (an SRT file) for this video and put together this page so you can check them. The video below is played through YouTube's official embed, and the subtitles are shown on top of it in sync. Nothing here uploads to or changes anything on your channel.</p>
-    <p class="about">The subtitles are offered free of charge. If you like them, you can download the SRT file and add it to the video yourself in YouTube Studio. If anything reads wrong, please tell me and I will fix it.</p>
-  </header>
-
-  <div class="grid">
-    <section aria-label="Video with Japanese subtitles">
-      <div class="stage" id="stage">
-        <div id="player"></div>
-        <div class="overlay" aria-live="off"><span id="caption"></span></div>
-        <div class="notice" id="notice" hidden>
-          <strong>The video could not be played on this page.</strong>
-          <span>Open it on YouTube instead: <a id="ytlink" href="https://www.youtube.com/watch?v=cyDHY2jMM4k" target="_blank" rel="noopener">youtube.com</a></span>
-        </div>
-      </div>
-      <div class="controls">
-        <button type="button" id="fs">Fullscreen with subtitles</button>
-        <button type="button" id="dl" class="primary">Download SRT (ja.srt)</button>
-        <span class="shift" role="group" aria-label="Subtitle timing">
-          <span>Timing</span>
-          <button type="button" id="earlier" aria-label="Show subtitles 0.5 seconds earlier">−0.5s</button>
-          <output id="shiftOut" aria-live="polite">0.0s</output>
-          <button type="button" id="later" aria-label="Show subtitles 0.5 seconds later">+0.5s</button>
-        </span>
-      </div>
-    </section>
-
-    <section class="panel" aria-label="Subtitle list">
-      <div class="panel-head">
-        <span><strong id="count">0</strong> subtitles</span>
-        <label><input type="checkbox" id="follow" checked> Follow playback</label>
-      </div>
-      <ol id="cues"></ol>
-    </section>
-  </div>
-
-  <section class="how">
-    <h2>Adding the subtitles to the video</h2>
-    <ol>
-      <li>Download the SRT file with the button above.</li>
-      <li>In YouTube Studio, open the video, then Subtitles.</li>
-      <li>Choose Add language, then Japanese, then Add under Subtitles.</li>
-      <li>Choose Upload file, then With timing, and select the SRT file.</li>
-    </ol>
-    <p>The timing buttons only shift the preview on this page. They do not change the SRT file.</p>
-  </section>
-
-  <footer>
-    The video belongs to its owner and is not copied here; it is streamed from YouTube. Fullscreen on this page uses its own button so the subtitles stay visible.
   </footer>
 </div>
 
@@ -3625,16 +3534,6 @@ GCWの本拠地だ!
       (document.exitFullscreen || document.webkitExitFullscreen).call(document);
     } else if (el.requestFullscreen) { el.requestFullscreen().catch(function () {}); }
     else if (el.webkitRequestFullscreen) { el.webkitRequestFullscreen(); }
-  });
-
-  /* ---------- SRT download ---------- */
-  document.getElementById("dl").addEventListener("click", function () {
-    var blob = new Blob([rawSrt], { type: "application/x-subrip;charset=utf-8" });
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url; a.download = "ja.srt";
-    document.body.appendChild(a); a.click(); a.remove();
-    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
   });
 
   /* ---------- Keep the screen awake while reviewing (Screen Wake Lock API) ---------- */
