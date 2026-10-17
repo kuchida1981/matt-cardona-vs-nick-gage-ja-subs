@@ -1,50 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Japanese Subtitles Preview</title>
+<title>The Untold Story of Matt Cardona vs. Nick Gage (日本語字幕)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  /* Layout: one column on phones; on wide screens the player sits left and a scrolling cue list sits right, matched in height. */
   :root {
-    --bg: #f1f2f4;
-    --surface: #ffffff;
-    --fg: #15181d;
-    --muted: #596270;
-    --line: #d8dbe0;
-    --accent: #b4232f;
+    --bg: #0b0d11;
+    --surface: #14171f;
+    --surface-hover: #1c212c;
+    --fg: #eceef1;
+    --muted: #8b95a5;
+    --line: #252a36;
+    --accent: #e53935;
     --accent-fg: #ffffff;
-    --cue-active: #fbe9ea;
-    --stage: #0b0c0e;
+    --cue-active: #331c20;
+    --cue-border: #e53935;
+    --stage: #000000;
     --font-body: "IBM Plex Sans", "Noto Sans JP", system-ui, -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
     --font-ja: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
     --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #111316;
-      --surface: #1a1d22;
-      --fg: #eceef1;
-      --muted: #9aa3b0;
-      --line: #2e333b;
-      --accent: #ef5b66;
-      --accent-fg: #17090b;
-      --cue-active: #3a2024;
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #111316;
-    --surface: #1a1d22;
-    --fg: #eceef1;
-    --muted: #9aa3b0;
-    --line: #2e333b;
-    --accent: #ef5b66;
-    --accent-fg: #17090b;
-    --cue-active: #3a2024;
     color-scheme: dark;
   }
 
@@ -57,46 +35,67 @@
     font-size: 15px;
     line-height: 1.6;
     padding-inline: 16px;
-    padding-block: 28px 48px;
+    padding-block: 20px 48px;
   }
-  .page { max-width: 1120px; margin-inline: auto; display: grid; gap: 24px; }
+  .page { max-width: 1320px; margin-inline: auto; display: grid; gap: 20px; }
 
-  header { display: grid; gap: 12px; max-width: 72ch; }
+  header { display: grid; gap: 8px; }
+  .header-meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
   .kicker {
     font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--accent); font-weight: 600; margin: 0;
+    color: var(--accent); font-weight: 700; margin: 0;
   }
-  h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.2; margin: 0; text-wrap: balance; }
-  .about { margin: 0; color: var(--fg); }
-  .about + .about { color: var(--muted); }
+  .external-link {
+    font-size: 13px; color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+    transition: color 0.15s;
+  }
+  .external-link:hover { color: var(--fg); text-decoration: underline; }
+  h1 { font-size: clamp(20px, 3.2vw, 30px); line-height: 1.3; margin: 0; text-wrap: balance; font-weight: 700; }
+  .summary { margin: 0; color: var(--muted); font-size: 14px; }
 
-  .grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: start; }
-  @media (min-width: 900px) {
-    .grid { grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr); }
+  .layout { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+  @media (min-width: 960px) {
+    .layout.has-sidebar { grid-template-columns: minmax(0, 1.8fr) minmax(320px, 1fr); }
   }
 
   .stage {
     position: relative; width: 100%; aspect-ratio: 16 / 9; max-width: 100%;
-    background: var(--stage); border-radius: 6px; overflow: hidden;
+    background: var(--stage); border-radius: 8px; overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
   .stage > #player, .stage > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
   .overlay {
-    position: absolute; left: 0; right: 0; bottom: 13%;
+    position: absolute; left: 0; right: 0; bottom: 12%;
     display: flex; justify-content: center; padding-inline: 5%;
     pointer-events: none; z-index: 2;
   }
   .overlay span {
-    font-family: var(--font-ja); font-weight: 700;
-    font-size: clamp(14px, 2.6vw, 26px); line-height: 1.4;
-    color: #fff; text-align: center; white-space: pre-line;
-    background: rgba(0, 0, 0, .72); padding: .18em .6em; border-radius: 4px;
-    text-shadow: 0 1px 2px rgba(0,0,0,.6);
-    max-width: 100%;
+    font-family: var(--font-ja);
+    font-weight: 700;
+    font-size: clamp(14px, 2.6vw, 26px);
+    line-height: 1.4;
+    color: #ffffff;
+    text-align: center;
+    white-space: pre-line;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    /* 視認性向上のためのテキスト縁取り */
+    text-shadow: 
+      0 0 4px #000000,
+      0 0 8px #000000,
+      0 1px 2px rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
   }
   .overlay span:empty { display: none; }
   .stage:fullscreen { border-radius: 0; aspect-ratio: auto; }
-  .stage:fullscreen .overlay span { font-size: clamp(20px, 3.2vw, 44px); }
-  .stage:fullscreen .overlay { bottom: 10%; }
+  .stage:fullscreen .overlay span {
+    font-size: clamp(22px, 3.6vw, 46px);
+    padding: 0.25em 0.75em;
+    -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.7);
+  }
+  .stage:fullscreen .overlay { bottom: 9%; }
 
   .notice {
     position: absolute; inset: 0; z-index: 3; display: grid; place-content: center;
@@ -105,56 +104,161 @@
   .notice[hidden] { display: none !important; }
   .notice a { color: #ff9aa2; }
 
-  .controls { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; margin-top: 12px; }
-  button, .btn {
-    font: inherit; font-size: 14px; font-weight: 600; cursor: pointer;
-    border: 1px solid var(--line); background: var(--surface); color: var(--fg);
-    padding: 8px 14px; border-radius: 6px; min-height: 40px;
+  .cc-hint {
+    margin-top: 10px; padding: 8px 14px; border-radius: 6px;
+    background: var(--surface); border: 1px solid var(--line);
+    font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px;
   }
-  button:hover { border-color: var(--muted); }
+  .cc-badge {
+    background: #383e4a; color: #fff; font-size: 11px; font-weight: 700;
+    padding: 2px 6px; border-radius: 3px; font-family: var(--font-mono); letter-spacing: 0.5px;
+  }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; margin-top: 14px; }
+  button, .btn {
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+    padding: 8px 14px; border-radius: 6px; min-height: 38px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  button:hover { background: var(--surface-hover); border-color: var(--muted); }
   button:focus-visible, input:focus-visible, a:focus-visible, li:focus-visible {
     outline: 2px solid var(--accent); outline-offset: 2px;
   }
   button.primary { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
-  button.primary:hover { filter: brightness(1.08); }
-  .shift { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 13px; }
-  .shift output { font-family: var(--font-mono); color: var(--fg); min-width: 6ch; text-align: center; font-variant-numeric: tabular-nums; }
-  .shift button { padding: 6px 10px; min-height: 36px; }
+  button.primary:hover { filter: brightness(1.12); }
+  button.active { background: #252e3e; border-color: #435470; }
+
+  .shift { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; min-height: 38px; }
+  .shift output { font-family: var(--font-mono); color: var(--fg); min-width: 5.5ch; text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .shift button { padding: 4px 8px; min-height: 28px; border: 1px solid var(--line); }
 
   .panel {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
     display: grid; grid-template-rows: auto minmax(0, 1fr); min-width: 0;
+    overflow: hidden;
   }
+  .layout:not(.has-sidebar) .panel { display: none; }
   .panel-head {
     display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;
     padding: 10px 14px; border-bottom: 1px solid var(--line);
-    font-size: 13px; color: var(--muted);
+    font-size: 13px; color: var(--muted); background: rgba(0, 0, 0, 0.15);
   }
   .panel-head strong { color: var(--fg); font-size: 14px; }
-  .panel-head label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; }
+  .panel-head label { display: inline-flex; gap: 6px; align-items: center; cursor: pointer; user-select: none; }
   #cues {
     list-style: none; margin: 0; padding: 4px 0; overflow-y: auto;
-    max-height: 420px; font-family: var(--font-ja); font-size: 14px; line-height: 1.5;
+    max-height: 480px; font-family: var(--font-ja); font-size: 14px; line-height: 1.5;
   }
-  @media (min-width: 900px) { #cues { max-height: 520px; } }
+  @media (min-width: 960px) { #cues { max-height: calc(100vh - 300px); min-height: 460px; } }
   #cues li {
-    display: grid; grid-template-columns: 6.2ch minmax(0, 1fr); gap: 10px;
-    padding: 6px 14px; cursor: pointer; border-left: 3px solid transparent;
+    display: grid; grid-template-columns: 6.4ch minmax(0, 1fr); gap: 10px;
+    padding: 8px 14px; cursor: pointer; border-left: 3px solid transparent;
+    transition: background 0.1s;
   }
-  #cues li:hover { background: var(--bg); }
-  #cues li.on { background: var(--cue-active); border-left-color: var(--accent); }
+  #cues li:hover { background: var(--surface-hover); }
+  #cues li.on { background: var(--cue-active); border-left-color: var(--cue-border); }
   #cues time { font-family: var(--font-mono); font-size: 12px; color: var(--muted); padding-top: 2px; font-variant-numeric: tabular-nums; }
   #cues .t { white-space: pre-line; overflow-wrap: anywhere; }
 
-  .how {
-    background: var(--surface); border: 1px solid var(--line); border-radius: 6px;
-    padding: 16px 18px; display: grid; gap: 8px; max-width: 72ch;
+  /* Collapsible creator guide */
+  .info-accordion {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    overflow: hidden;
   }
-  .how h2 { font-size: 16px; margin: 0; }
-  .how ol { margin: 0; padding-left: 1.3em; display: grid; gap: 4px; }
-  .how p { margin: 0; color: var(--muted); font-size: 13px; }
-  code { font-family: var(--font-mono); font-size: .92em; }
-  footer { color: var(--muted); font-size: 12px; max-width: 72ch; }
+  .info-accordion summary {
+    padding: 14px 18px; font-weight: 600; font-size: 14px; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    user-select: none; list-style: none;
+  }
+  .info-accordion summary::-webkit-details-marker { display: none; }
+  .info-accordion summary::after { content: "+"; font-size: 18px; color: var(--muted); }
+  .info-accordion[open] summary::after { content: "−"; }
+  .info-accordion summary:hover { background: var(--surface-hover); }
+  .info-content {
+    padding: 0 18px 18px; display: grid; gap: 12px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--line);
+    padding-top: 14px;
+  }
+  .info-content p { margin: 0; line-height: 1.6; }
+  .info-content ol { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; }
+  .info-content code { font-family: var(--font-mono); font-size: .95em; color: var(--fg); background: rgba(255,255,255,0.06); padding: 2px 5px; border-radius: 3px; }
+
+  footer { color: var(--muted); font-size: 12px; text-align: center; padding-block: 10px; }
+
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="header-meta">
+      <p class="kicker">YouTube 同期字幕ビューア</p>
+      <a class="external-link" href="https://www.youtube.com/watch?v=cyDHY2jMM4k" target="_blank" rel="noopener">YouTube 公式動画を開く ↗</a>
+    </div>
+    <h1>The Untold Story of Matt Cardona vs. Nick Gage</h1>
+    <p class="summary">The Deathmatch That Changed Wrestling · 日本語字幕同期オーバーレイ</p>
+  </header>
+
+  <div class="layout has-sidebar" id="layout">
+    <section aria-label="動画プレイヤー">
+      <div class="stage" id="stage">
+        <div id="player"></div>
+        <div class="overlay" aria-live="off"><span id="caption"></span></div>
+        <div class="notice" id="notice" hidden>
+          <strong>このページで動画を再生できませんでした。</strong>
+          <span>YouTubeで直接開いてください: <a id="ytlink" href="https://www.youtube.com/watch?v=cyDHY2jMM4k" target="_blank" rel="noopener">youtube.com</a></span>
+        </div>
+      </div>
+
+      <div class="cc-hint">
+        <span class="cc-badge">CC</span>
+        <span>YouTube公式の字幕が重なる場合は、プレイヤー右下の字幕アイコン（CC）をオフにしてください。</span>
+      </div>
+
+      <div class="controls">
+        <button type="button" id="fs" class="primary">全画面で観る（字幕付き）</button>
+        <button type="button" id="toggleSidebar">字幕リスト切替</button>
+        <span class="shift" role="group" aria-label="字幕タイミング調整">
+          <span>タイミング</span>
+          <button type="button" id="earlier" aria-label="字幕を0.5秒早く表示">−0.5s</button>
+          <output id="shiftOut" aria-live="polite">0.0s</output>
+          <button type="button" id="later" aria-label="字幕を0.5秒遅く表示">+0.5s</button>
+        </span>
+        <button type="button" id="dl">SRTダウンロード (ja.srt)</button>
+      </div>
+    </section>
+
+    <aside class="panel" id="transcriptPanel" aria-label="字幕トランスクリプト">
+      <div class="panel-head">
+        <span><strong>字幕トランスクリプト</strong> (<span id="count">0</span>件)</span>
+        <label><input type="checkbox" id="follow" checked> 再生に追従</label>
+      </div>
+      <ol id="cues"></ol>
+    </aside>
+  </div>
+
+  <details class="info-accordion">
+    <summary>動画制作者様へのご案内 & 字幕ファイル（SRT）について</summary>
+    <div class="info-content">
+      <p>このページは、YouTube動画に対して作成した日本語字幕（SRT）の同期確認・視聴用ビューアです。動画はYouTube公式プレイヤーを埋め込んでおり、チャンネルや動画の設定を変更するものではありません。</p>
+      <p>本字幕は制作者様に無償でご提供しております。公式字幕として適用いただく場合は、上記の「SRTダウンロード」ボタンからファイルを保存し、YouTube Studioよりご登録いただけます。</p>
+      <div><strong>YouTube Studioへの登録手順:</strong></div>
+      <ol>
+        <li>「SRTダウンロード」ボタンで <code>ja.srt</code> を保存します。</li>
+        <li>YouTube Studioで対象の動画を開き、「字幕」を選択します。</li>
+        <li>「言語を追加」から「日本語」を選択し、「追加」をクリックします。</li>
+        <li>「ファイルをアップロード」→「タイミングあり」を選び、ダウンロードしたSRTファイルを選択します。</li>
+      </ol>
+      <p>※タイミング調整ボタンはこのページ上での同期調整のみを行い、SRTファイルの内容自体は変更されません。</p>
+    </div>
+  </details>
+
+  <footer>
+    本動画の著作権は権利者に帰属します。動画はYouTubeの埋め込み規約に基づき再生しています。
+  </footer>
+</div>
 
   @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
@@ -3497,6 +3601,16 @@ GCWの本拠地だ!
     setActive(findCue(player.getCurrentTime() - shift));
   }, 100);
 
+  /* ---------- Transcript sidebar toggle ---------- */
+  var layout = document.getElementById("layout");
+  var toggleBtn = document.getElementById("toggleSidebar");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      var isSidebarOn = layout.classList.toggle("has-sidebar");
+      toggleBtn.classList.toggle("active", !isSidebarOn);
+    });
+  }
+
   /* ---------- Timing shift ---------- */
   var out = document.getElementById("shiftOut");
   function showShift() { out.textContent = (shift > 0 ? "+" : shift < 0 ? "−" : "") + Math.abs(shift).toFixed(1) + "s"; activeIdx = -2; }
@@ -3540,7 +3654,7 @@ GCWの本拠地だ!
   /* ---------- YouTube IFrame API ---------- */
   var notice = document.getElementById("notice");
   window.onYouTubeIframeAPIReady = function () {
-    var vars = { rel: 0, fs: 0, playsinline: 1, cc_load_policy: 0, modestbranding: 1 };
+    var vars = { rel: 0, fs: 0, playsinline: 1, cc_load_policy: 0, modestbranding: 1, hl: "ja" };
     if (location.protocol === "http:" || location.protocol === "https:") vars.origin = location.origin;
     player = new YT.Player("player", {
       videoId: VIDEO_ID,
@@ -3549,7 +3663,7 @@ GCWの本拠地だ!
       events: {
         onReady: function () { ready = true; },
         onStateChange: function (e) {
-          // 1=playing, 2=paused: 確認中は画面ロックしない。0=ended, -1/5 は解除
+          // 1=playing, 2=paused: 視聴中は画面ロックしない。0=ended, -1/5 は解除
           wantLock = (e.data === 1 || e.data === 2);
           if (wantLock) acquireLock(); else releaseLock();
         },
