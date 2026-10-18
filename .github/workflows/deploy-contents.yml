@@ -1,0 +1,41 @@
+name: Deploy to u-rei.com-contents
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/workflows/deploy-contents.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+
+      - name: Checkout target repository (u-rei.com-contents)
+        uses: actions/checkout@v4
+        with:
+          repository: kuchida1981/u-rei.com-contents
+          ssh-key: ${{ secrets.CONTENTS_DEPLOY_KEY }}
+          path: contents-repo
+
+      - name: Sync docs to target
+        run: |
+          mkdir -p contents-repo/matt-cardona-vs-nick-gage-ja-subs
+          rsync -av --delete docs/ contents-repo/matt-cardona-vs-nick-gage-ja-subs/
+
+      - name: Commit and push changes
+        run: |
+          cd contents-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add matt-cardona-vs-nick-gage-ja-subs/
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "sync: update matt-cardona-vs-nick-gage-ja-subs (${{ github.sha }})"
+            git push origin main
+          fi
